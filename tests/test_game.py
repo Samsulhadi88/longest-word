@@ -45,3 +45,6 @@ class TestGame:
         assert new_game.is_valid(test_word) is False
         # teardown
         assert new_game.grid == list(test_grid) # Make sure the grid remained
+        new_game = Game()
+        new_game.grid = list('KWIENFUQW') # Force the grid to a test case:
+        assert new_game.is_valid('FEUN') is False
